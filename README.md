@@ -25,17 +25,17 @@ MovieApp helps to find out, search and see detail of the most popular movies. It
 **- Stories Folder:** It has all user stories in application.
 *   **MovieCollectionViewCell.swift:** has responsibility just showing UI for "Movie" type item as CollectionView's cell
 *   **MovieViewController.swift:** It is main page. It has responsibilities for CollectionView. We can config CollectionView with properties. We can change start "pageId" for service request, style of CollectionView(List/Grid), how many items in a row/column etc. CollectionView has endless scroll with changing "pageId". Also, it handles UISearchBar to filter while user typing. There is also NotificationCenter to notify controller device rotated. Lastly, it fetches Movie whether favorited or not using Core Data 
-*   **MovieDetailView.swift:** has responsible only UI. NSLayoutConstraint used to create UI programmatically. Sizes are not given fixed. Sizes are adapted as screen size.
-*   **MovieDetailViewController.swift:**  has responsible to fetch selected movie details from "MovieViewController". Also, it  makes a movie favorite or not with using "DataPersistence" file's static methods.
+*   **MovieDetailView.swift:** has responsibility only UI. NSLayoutConstraint used to create UI programmatically. Sizes are not given fixed. Sizes are adapted as screen size.
+*   **MovieDetailViewController.swift:**  has responsibility to fetch selected movie details from "MovieViewController". Also, it  makes a movie favorite or not with using "DataPersistence" file's static methods.
 
 **- Models Folder:** It has whole models for app.
 *   **MovieRoot.swift:** is just simple struct to model whole api response. It comforms to Codable protocol and has some CodingKeys to handle some response keys.
 *   **Movie.swift:** is just main struct for movie to send and recieve files as type.
 
 **- Networking Folder:** It has all about networking stuff.
-*   **Service.swift:**: is protocol to create simple network layer. Defines method types, parameters, path, baseURL
-*   **ServiceProvider.swift:**: has generic as Service and Result type to handle request and provide result.
-*   **MoviesApi.swift:**: has two services with get method, one is for take popular movies as pageId, other one is movie detail given MovieId.and it comforms Service protocol to create needed parameters.
+*   **Service.swift:** is protocol to create simple network layer. Defines method types, parameters, path, baseURL
+*   **ServiceProvider.swift:** has generic as Service and Result type to handle request and provide result.
+*   **MoviesApi.swift:** has two services with get method, one is for take popular movies as pageId, other one is movie detail given MovieId.and it comforms Service protocol to create needed parameters.
 *   **MoviesServices.swift:**: calls requests and return values as response from service. It uses to JSONDecoder to decode data.
 
 **- Data Folder:** It is for Core Data framework.
